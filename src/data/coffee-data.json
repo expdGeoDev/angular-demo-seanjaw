@@ -1,28 +1,82 @@
 {
-	"coffee": [
-		{
-			"id": 1,
-			"brand": "Kicking Horse",
-			"roast": "dark",
-			"groundOrBeans": "beans"
-		},
-		{
-			"id": 2,
-			"brand": "Greenwood Lake Roasters",
-			"roast": "medium",
-			"groundOrBeans": "ground"
-		},
-		{
-			"id": 3,
-			"brand": "Counter Culture",
-			"roast": "light",
-			"groundOrBeans": "beans"
-		},
-		{
-			"id": 4,
-			"brand": "Starbucks",
-			"roast": "medium",
-			"groundOrBeans": "ground"
-		}
-	]
+  "coffee": [
+    {
+      "id": 1,
+      "brand": "Kicking Horse",
+      "roast": "dark",
+      "groundOrBeans": "beans"
+    },
+    {
+      "id": 2,
+      "brand": "Greenwood Lake Roasters",
+      "roast": "medium",
+      "groundOrBeans": "ground"
+    },
+    {
+      "id": 3,
+      "brand": "Counter Culture",
+      "roast": "light",
+      "groundOrBeans": "beans"
+    },
+    {
+      "id": 4,
+      "brand": "Starbucks",
+      "roast": "medium",
+      "groundOrBeans": "ground"
+    },
+    {
+      "id": 5,
+      "brand": "Klatch",
+      "roast": "medium",
+      "groundOrBeans": "ground",
+      "grind": null,
+      "singleOrigin": false,
+      "flavorNotes": ""
+    },
+    {
+      "id": 6,
+      "brand": "Klatch - WBC",
+      "roast": "medium",
+      "groundOrBeans": "beans",
+      "grind": null,
+      "singleOrigin": null,
+      "flavorNotes": null
+    },
+    {
+      "id": 7,
+      "brand": "Klatch",
+      "roast": "light",
+      "groundOrBeans": "ground",
+      "grind": null,
+      "singleOrigin": false,
+      "flavorNotes": ""
+    },
+    {
+      "id": 8,
+      "brand": "BRanchd",
+      "roast": "medium",
+      "groundOrBeans": "ground",
+      "grind": 2,
+      "singleOrigin": false,
+      "flavorNotes": "sfdgsdfg"
+    },
+    {
+      "id": 9,
+      "brand": "dsgsd",
+      "roast": "medium",
+      "groundOrBeans": "ground",
+      "grind": null,
+      "singleOrigin": true,
+      "flavorNotes": ""
+    },
+    {
+      "id": 10,
+      "brand": "Klatch",
+      "roast": "light",
+      "groundOrBeans": "ground",
+      "grind": 1,
+      "singleOrigin": false,
+      "flavorNotes": ""
+    }
+  ]
 }

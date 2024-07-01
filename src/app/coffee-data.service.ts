@@ -21,4 +21,13 @@ export class CoffeeDataService {
 	findByBrand(brandName: string): Coffee[] | undefined {
 		return this.coffeeData.filter((coffee) => coffee.brand === brandName);
 	}
+
+	addCoffee(coffee: Coffee){
+		this.coffeeData.push(coffee);
+	}
+
+	generateNextId(coffeeData: any[]): number | undefined {
+	const highestId = coffeeData.reduce((max, coffee) => coffee.id > max ? coffee.id : max, 0);
+	return highestId + 1;
+	}
 }

@@ -13,4 +13,12 @@ export class CoffeeHttpService {
 	getAllBeans(): Observable<Coffee[]> {
 		return this.client.get<Coffee[]>(`${this.baseUrl}/coffee`);
 	}
+
+	addCoffee(coffee: Coffee): Observable<Coffee> {
+		return this.client.post<Coffee>(`${this.baseUrl}/coffee`, coffee);
+	}
+
+	generateNextId(coffees: Coffee[]): number | undefined {
+		return coffees.length > 0 ? Math.max(...coffees.map(coffee => coffee.id)) + 1 : 1;
+	}
 }

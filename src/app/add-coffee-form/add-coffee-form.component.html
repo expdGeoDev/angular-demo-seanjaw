@@ -1,1 +1,47 @@
-<p>add-coffee-form works!</p>
+<form [formGroup]="coffeeForm" (ngSubmit)="onSubmit()" class="mt-4">
+	<h1 class="mb-4">Add Coffee</h1>
+	<div class="form-group mb-4">
+		<label for="brand">Brand: <span class="required">*</span></label>
+		<input id="brand" type="text" formControlName="brand" class="form-control">
+	</div>
+	<div class="form-group mb-4">
+		<label for="roastType">Roast Type: <span class="required">*</span></label>
+		<select id="roastType" formControlName="roast" class="form-control">
+			<option *ngFor="let level of roastTypes" [value]="level">{{ level | titlecase }}</option>
+		</select>
+	</div>
+	<div class="form-group mb-4">
+		<label>Ground or Beans: <span class="required">*</span></label>
+		<div class="form-check">
+			<input type="radio" id="ground" formControlName="groundOrBeans" value="ground" class="form-check-input">
+			<label for="ground" class="form-check-label">Ground</label>
+		</div>
+		<div class="form-check">
+			<input type="radio" id="beans" formControlName="groundOrBeans" value="beans" class="form-check-input">
+			<label for="beans" class="form-check-label">Beans</label>
+		</div>
+	</div>
+	<div class="form-group mb-4">
+		<label for="grindSetting">Grind Setting:</label>
+		<select id="grindSetting" formControlName="grind" class="form-control">
+			<option *ngFor="let setting of grindSettings" [ngValue]="setting.value">{{ setting.label }}</option>
+		</select>
+	</div>
+	<div class="form-group mb-4">
+		<label for="singleOrigin">Single Origin?</label>
+		<app-custom-toggle id="singleOrigin" formControlName="singleOrigin"></app-custom-toggle>
+	</div>
+	<div class="form-group mb-4">
+		<label for="flavorNotes">Flavor Notes:</label>
+		<textarea id="flavorNotes" formControlName="flavorNotes" class="form-control"></textarea>
+	</div>
+	<div class="row justify-content-end">
+		<div class="col-auto">
+			<button type="button" class="btn btn-secondary me-2" (click)="onReset()">Reset</button>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	</div>
+
+</form>
+
+<app-success-notification [message]="notificationMessage"></app-success-notification>
